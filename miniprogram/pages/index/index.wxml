@@ -1,0 +1,46 @@
+<view class="page">
+  <view class="hero">
+    <text class="eyebrow">ZHEDREAM</text>
+    <text class="title">者之梦</text>
+    <text class="subtitle">记录技术、思考与生活</text>
+  </view>
+
+  <view wx:if="{{error && !articles.length}}" class="state-card">
+    <text class="state-title">暂时无法加载文章</text>
+    <text class="state-text">{{error}}</text>
+    <button class="retry" bindtap="retry">重新加载</button>
+  </view>
+
+  <view wx:elif="{{!loading && !articles.length}}" class="state-card">
+    <text class="state-title">还没有公开文章</text>
+    <text class="state-text">稍后再来看看吧</text>
+  </view>
+
+  <view class="article-list">
+    <view
+      wx:for="{{articles}}"
+      wx:key="id"
+      class="article-card"
+      data-id="{{item.id}}"
+      bindtap="openArticle"
+      hover-class="article-card--active"
+    >
+      <view class="meta">
+        <text wx:if="{{item.type.name}}" class="category">{{item.type.name}}</text>
+        <text class="date">{{item.dateText}}</text>
+      </view>
+      <text class="article-title">{{item.title}}</text>
+      <text wx:if="{{item.desc}}" class="description">{{item.desc}}</text>
+      <view class="footer">
+        <text wx:if="{{item.tagText}}" class="tags">{{item.tagText}}</text>
+        <text class="read-more">阅读全文 →</text>
+      </view>
+    </view>
+  </view>
+
+  <view wx:if="{{loading}}" class="loading">正在加载…</view>
+  <view wx:elif="{{articles.length && !hasMore}}" class="end">已经到底了</view>
+  <view wx:if="{{error && articles.length}}" class="inline-error" bindtap="retry">
+    {{error}}，点击重试
+  </view>
+</view>
