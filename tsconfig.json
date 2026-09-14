@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES2019",
+    "module": "CommonJS",
+    "strict": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "moduleResolution": "Node",
+    "types": ["miniprogram-api-typings"],
+    "lib": ["ES2019"]
+  },
+  "include": ["miniprogram/**/*.ts"]
+}

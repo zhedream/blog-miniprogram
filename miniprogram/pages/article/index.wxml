@@ -1,0 +1,30 @@
+<view class="page">
+  <view wx:if="{{loading}}" class="state">正在加载文章…</view>
+
+  <view wx:elif="{{error}}" class="state error">
+    <text>{{error}}</text>
+    <button class="retry" bindtap="retry">重新加载</button>
+  </view>
+
+  <article wx:else class="article">
+    <view class="header">
+      <view class="meta">
+        <text wx:if="{{category}}" class="category">{{category}}</text>
+        <text class="date">{{dateText}}</text>
+      </view>
+      <text class="title">{{title}}</text>
+      <text wx:if="{{description}}" class="description">{{description}}</text>
+      <text wx:if="{{tagText}}" class="tags">{{tagText}}</text>
+    </view>
+
+    <view class="content">
+      <mp-html
+        content="{{content}}"
+        lazy-load
+        selectable
+        use-anchor
+        scroll-table
+      />
+    </view>
+  </article>
+</view>

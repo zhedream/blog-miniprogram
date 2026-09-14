@@ -1,0 +1,153 @@
+.page {
+  padding: 32rpx 28rpx 72rpx;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  padding: 52rpx 20rpx 44rpx;
+}
+
+.eyebrow {
+  color: #2563eb;
+  font-size: 22rpx;
+  font-weight: 700;
+  letter-spacing: 6rpx;
+}
+
+.title {
+  margin-top: 12rpx;
+  color: #111827;
+  font-size: 64rpx;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.subtitle {
+  margin-top: 14rpx;
+  color: #6b7280;
+  font-size: 28rpx;
+}
+
+.article-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+}
+
+.article-card,
+.state-card {
+  padding: 34rpx;
+  border: 1rpx solid #e8ebf0;
+  border-radius: 28rpx;
+  background: #ffffff;
+  box-shadow: 0 10rpx 32rpx rgba(15, 23, 42, 0.05);
+}
+
+.article-card--active {
+  opacity: 0.76;
+  transform: scale(0.995);
+}
+
+.meta,
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.category {
+  padding: 6rpx 14rpx;
+  border-radius: 999rpx;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 22rpx;
+}
+
+.date {
+  color: #9ca3af;
+  font-size: 23rpx;
+}
+
+.article-title {
+  display: block;
+  margin-top: 22rpx;
+  color: #111827;
+  font-size: 36rpx;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.description {
+  display: -webkit-box;
+  margin-top: 16rpx;
+  overflow: hidden;
+  color: #626b78;
+  font-size: 27rpx;
+  line-height: 1.75;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.footer {
+  margin-top: 25rpx;
+  gap: 20rpx;
+}
+
+.tags {
+  flex: 1;
+  overflow: hidden;
+  color: #8b95a5;
+  font-size: 23rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.read-more {
+  color: #2563eb;
+  font-size: 24rpx;
+  font-weight: 600;
+}
+
+.state-card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 24rpx;
+  text-align: center;
+}
+
+.state-title {
+  color: #1f2937;
+  font-size: 31rpx;
+  font-weight: 700;
+}
+
+.state-text {
+  margin-top: 12rpx;
+  color: #7b8491;
+  font-size: 25rpx;
+}
+
+.retry {
+  margin-top: 26rpx;
+  padding: 0 34rpx;
+  border-radius: 999rpx;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 25rpx;
+  line-height: 72rpx;
+}
+
+.loading,
+.end,
+.inline-error {
+  padding: 34rpx 0 8rpx;
+  color: #8b95a5;
+  font-size: 24rpx;
+  text-align: center;
+}
+
+.inline-error {
+  color: #dc2626;
+}
